@@ -46,6 +46,11 @@ func New(opts ...Option) (*Client, error) {
 	return c, nil
 }
 
+
+
+func (c *Client) Toggle() {
+	c.muted = !c.muted
+}
 // Clone returns a clone of the Client. The cloned Client inherits its
 // configuration from its parent.
 //
